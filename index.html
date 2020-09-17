@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Translator</title>
+  <meta charset="UTF-8">
+  <style>
+
+  textarea {
+    position: absolute;
+    top: 50%; left: 25%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+  }
+
+  img.a {
+  position: relative;
+  top: 10px; left:50%;
+  transform: translate(50%, 50%);
+}
+
+  </style>
+
+</head>
+<body>
+
+  <form method="GET" action="/image">
+        <textarea style="font-family:Noto Sans;font-size:16pt;line-height:160%;height:500px;width:40%;" id="input" name="jiyeon"></textarea>
+        <button type="submit" class="button">TRANSLATE</button>
+  </form>
+    {% for m1 in myList %}
+    <img src="{{m1}}" height="100" width="100" class="a">
+    {% endfor %}
+
+</body>
+</html>
